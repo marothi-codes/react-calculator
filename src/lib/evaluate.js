@@ -7,10 +7,10 @@ const addition = /(\d+(?:\.\d+)?) ?\+ ?(\d+(?:\.\d+)?)/; // Regex for identifyin
 const subtraction = /(\d+(?:\.\d+)?) ?- ?(\d+(?:\.\d+)?)/; // Regex for identifying subtraction (x - y)
 
 /**
- * Evaluates a numerical expression as a string and returns a Number
- * Follows standard PEMDAS operation ordering
+ * Evaluates a string based arithmentic expression and returns a number.
+ * Follows the standard PEMDAS operator precedence.
  * @param {String} expression Arithmetic expression input.
- * @returns {Number} Result of expression
+ * @returns {Number} Result of the calculation.
  */
 function evaluate(expression) {
   if (isNaN(Number(expression))) {

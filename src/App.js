@@ -1,5 +1,5 @@
-/* eslint no-eval: 0 */
 import { useState } from 'react';
+import evaluate from './lib/evaluate';
 
 function App() {
   const [calc, setCalculator] = useState('');
@@ -39,7 +39,7 @@ function App() {
 
   /** Triggers the arithmetic operation. */
   const calulate = () => {
-    setCalculator(eval(calc).toString());
+    setCalculator(evaluate(calc).toString());
   };
 
   /** Detetes a character one click at a time. */
